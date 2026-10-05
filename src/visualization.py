@@ -56,7 +56,8 @@ def build_hotspot_map(hotspots: list, cell_size: float, output_path: str) -> Non
         ).add_to(fmap)
 
     _add_legend(fmap, max_count)
-    os.makedirs(os.path.dirname(output_path), exist_ok=True)
+    _out_dir = os.path.dirname(output_path) or "."
+    os.makedirs(_out_dir, exist_ok=True)
     fmap.save(output_path)
     print(f"FR-8: Interactive map saved -> {output_path}")
 

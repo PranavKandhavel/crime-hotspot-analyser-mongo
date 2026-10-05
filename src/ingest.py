@@ -21,8 +21,11 @@ def _clean_value(v):
         return None
     if isinstance(v, float) and math.isnan(v):
         return None
-    if pd.isna(v):
-        return None
+    try:
+        if pd.isna(v):
+            return None
+    except (TypeError, ValueError):
+        pass
     return v
 
 
