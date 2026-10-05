@@ -1,0 +1,7 @@
+pymongo[srv]==4.8.0
+pandas==2.2.2
+shapely==2.0.5
+folium==0.16.0
+matplotlib==3.9.0
+python-dotenv==1.0.1
+pytest==8.2.2
